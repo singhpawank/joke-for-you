@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    background-color: #3A9973;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+
+/* Style for the toggle switch input */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Styling the switch thumb (slider) */
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+/* Styling the toggle switch when checked */
+input[type="checkbox"]:checked::before {
+    left: 19px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #3A9973;
+}
+
+
+.flex {
+    display: flex;
+    margin: auto;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.toggle-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #3A9973;
+    border-radius: 5px;
+    padding: 5px 0px;
+    width: 170px;
+}
+
+/* Style for the toggle switch label */
+.toggle-items h2 {
+    /* sfont-weight: bold; */
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-top: 2px solid #3A9973;
+    width: 100%;
+    margin: auto;
+}
+
+.toggle-item label {
+    margin: auto;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.centered-button {
+    text-align: center;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    margin: auto;
+    margin-top: 20px;
+    padding: 6px 12px;
+    background-color: #3A9973;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #3A9973;
+}
+
+.joke {
+    text-align: center;
+
+}
+
+.joke p {
+    margin: 10px;
+}
