@@ -1,9 +1,9 @@
-import express, { response } from "express";
+import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const API_URL = "https://v2.jokeapi.dev/joke/";
 
 app.use(express.static("public"));
@@ -59,6 +59,6 @@ app.post('/submit', async (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Server is running on port:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port:${PORT}...`);
 });
