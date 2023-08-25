@@ -12,7 +12,7 @@ html {
 h1 {
     text-align: center;
     background-color: #3A9973;
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     align-items: center;
     align-content: center;
@@ -26,7 +26,7 @@ h1 a {
 
 
 form {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 
@@ -34,10 +34,10 @@ form {
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
-    width: 35px;
-    height: 18px;
+    width: 2.2rem;
+    height: 1.125rem;
     background-color: #ccc;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     position: relative;
     cursor: pointer;
 }
@@ -46,18 +46,18 @@ input[type="checkbox"] {
 input[type="checkbox"]::before {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 0.875rem;
+    height: 0.875rem;
     background-color: white;
     border-radius: 50%;
-    top: 2px;
-    left: 2px;
+    top: 0.125rem;
+    left: 0.125rem;
     transition: 0.3s;
 }
 
 /* Styling the toggle switch when checked */
 input[type="checkbox"]:checked::before {
-    left: 19px;
+    left: 1.2rem;
 }
 
 input[type="checkbox"]:checked {
@@ -68,43 +68,44 @@ input[type="checkbox"]:checked {
 .flex {
     display: flex;
     margin: auto;
-    width: 360px;
+    padding: 0 1rem;
     justify-content: space-between;
+    max-width: 30rem;
 }
 
 .toggle-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #3A9973;
-    border-radius: 5px;
-    padding: 5px 0px;
-    width: 170px;
+    border: 0.125rem solid #3A9973;
+    border-radius: 0.32rem;
+    padding: 0.32rem 0rem;
+    width: 10.625rem;
 }
 
 /* Style for the toggle switch label */
 .toggle-items h2 {
     /* sfont-weight: bold; */
-    margin-bottom: 5px;
-    font-size: 18px;
+    margin-bottom: 0.3rem;
+    font-size: 1.125rem;
     font-weight: 600;
-    padding: 0 10px;
+    padding: 0 0.625rem;
 
 }
 
 .toggle-item {
     display: flex;
     align-items: center;
-    padding: 2px 10px;
-    border-top: 2px solid #3A9973;
+    padding:0.125rem 0.625rem;
+    border-top: 0.125rem solid #3A9973;
     width: 100%;
     margin: auto;
 }
 
 .toggle-item label {
     margin: auto;
-    margin-right: 10px;
-    font-size: 15px;
+    margin-right: 0.625rem;
+    font-size: 0.94rem;
 }
 
 .centered-button {
@@ -114,13 +115,14 @@ input[type="checkbox"]:checked {
 /* Style for the submit button */
 button[type="submit"] {
     margin: auto;
-    margin-top: 20px;
-    padding: 6px 12px;
+    margin-top: 1.25rem;
+    padding: 0.4rem 0.75rem;
     background-color: #3A9973;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.32rem;
     color: white;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 
@@ -134,5 +136,5 @@ button[type="submit"]:hover {
 }
 
 .joke p {
-    margin: 10px;
+    margin: 0.7rem;
 }
