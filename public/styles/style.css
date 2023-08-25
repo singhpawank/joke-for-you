@@ -9,6 +9,10 @@ html {
     color: black;
 }
 
+body {
+    min-height: 100vh;
+}
+
 h1 {
     text-align: center;
     background-color: #3A9973;
@@ -96,7 +100,7 @@ input[type="checkbox"]:checked {
 .toggle-item {
     display: flex;
     align-items: center;
-    padding:0.125rem 0.625rem;
+    padding: 0.125rem 0.625rem;
     border-top: 0.125rem solid #3A9973;
     width: 100%;
     margin: auto;
@@ -137,4 +141,32 @@ button[type="submit"]:hover {
 
 .joke p {
     margin: 0.7rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2.4rem;
+    width: 100%;
+    background-color: #3A9973;
+    color: #154e37;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+footer img{
+    width: 1.5rem;
+    height: 1.5rem;
 }
