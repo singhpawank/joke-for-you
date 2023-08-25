@@ -14,6 +14,11 @@ app.get("/", (req, res) => {
     res.render("index.ejs", { content: "" });
 });
 
+app.get("/submit", (req, res)=>{
+    res.render("index.ejs", {content: ""});
+});
+
+
 app.post('/submit', async (req, res) => {
     console.log(req.body);
     const categories = ["Programming", "Dark", "Pun", "Spooky", "Christmas", "Miscellaneous"];
