@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke for You</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
 </head>
+
+<% let categoryChecked = Array(6).fill(false); %>
+<% category.forEach(idx => { %>
+<%    categoryChecked[Number(idx)] = true; %>
+<% }); %>
+
+<% let blacklists = Array(6).fill(false); %>
+<% blacklist.forEach(idx => { %>
+<%    blacklists[Number(idx)] = true; %>
+<% }); %>
 
 <body>
     <h1><a href="/">Joke For You</a></h1>
@@ -14,11 +28,15 @@
         <div class="flex">
             <div class="toggle-items">
                 <h2>Categories</h2>
+                <div class="select-all">
+                    <label for="all-categories">Select All </label>
+                    <input type="checkbox" class="toggle" id="all-categories" >
+                </div>
                 <% const categories=["Programming", "Dark" , "Pun" , "Spooky" , "Christmas" , "Misc" ] %>
                     <% for(let i=0; i<6; i++){ %>
                         <div class="toggle-item">
                             <label for=<%=categories[i] %>> <%= categories[i] %> </label>
-                            <input type="checkbox" class="toggle category" id=<%=categories[i] %> name="category" value=
+                            <input type="checkbox" class="toggle category <%= categoryChecked[i]?'checked':""%>" id=<%=categories[i] %> name="category" value=
                             <%= i %>>
                         </div>
                         <% } %>
@@ -26,12 +44,16 @@
             </div>
 
             <div class="toggle-items">
-                <h2>Blacklist</h2>
+                <h2>Blacklists</h2>
+                <div class="select-all">
+                    <label for="all-blacklists">Select All </label>
+                    <input type="checkbox" class="toggle" id="all-blacklists" >
+                </div>
                 <% const blacklistFlags=["nsfw", "Religious" , "Political" , "Racist" , "Sexist" , "Explicit" ]; %>
                     <% for(let i=0; i<6; i++){ %>
                         <div class="toggle-item">
                             <label for=<%=blacklistFlags[i] %>> <%= blacklistFlags[i] %></label>
-                            <input type="checkbox" class="toggle blacklist" id=<%=blacklistFlags[i] %> name="blacklist"
+                            <input type="checkbox" class="toggle blacklist <%= blacklists[i]?'checked':""%>" id=<%=blacklistFlags[i] %> name="blacklist"
                             value=<%= i %>>
                         </div>
                         <% } %>

@@ -10,20 +10,22 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-
-    res.render("index.ejs", { content: "" });
+    
+    res.render("index.ejs", { content: "", "category": [], "blacklist":[] });
 });
 
 app.get("/submit", (req, res)=>{
-    res.render("index.ejs", {content: ""});
+    res.render("index.ejs", {content: "", "category": [], "blacklist":[]});
 });
 
 
 app.post('/submit', async (req, res) => {
+
     console.log(req.body);
+
     const categories = ["Programming", "Dark", "Pun", "Spooky", "Christmas", "Miscellaneous"];
     let categoriesReq = "Any";
-    if (req.body.category.length < 6) {
+    if (req.body.category && req.body.category.length < 6) {
         categoriesReq = categories[req.body.category[0]];
         for (let i = 1; i < req.body.category.length; i++) {
             categoriesReq = categoriesReq + "," + categories[req.body.category[i]];
@@ -43,21 +45,20 @@ app.post('/submit', async (req, res) => {
     const url = API_URL + categoriesReq + blacklists;
     console.log(url);
 
-
     try {
         const response = await axios.get(url);
         console.log(response.data);
-        res.render("index.ejs", { content: response.data });
+        res.render("index.ejs", { "content": response.data, "category": [... req.body.category||[]], "blacklist":[... req.body.blacklist||[]]});
     } catch (error) {
         if (error.response) {
-            res.render("index.ejs", { error: error.response.data });
+            res.render("index.ejs", { error: error.response.data, "content":"",  "category": [], "blacklist":[]});
             console.log(error.response.status);
             console.log(error.response.data);
         } else if (error.request) {
-            res.render("index.ejs", { error: "Apologies, Something went wrong!" });
+            res.render("index.ejs", { error: "Apologies, Something went wrong!", "content":"",  "category": [], "blacklist":[] });
             console.log(error.toJSON());
         } else {
-            res.render("index.ejs", { error: error.message });
+            res.render("index.ejs", { error: error.message, "content":"",  "category": [], "blacklist":[] });
             console.log(error.message);
         }
     }

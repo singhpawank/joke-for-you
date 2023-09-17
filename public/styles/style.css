@@ -7,6 +7,7 @@
 html {
     background-color: white;
     color: black;
+    font-family: 'Merriweather', serif;
 }
 
 body {
@@ -16,11 +17,11 @@ body {
 h1 {
     text-align: center;
     background-color: #3A9973;
-    height: 4rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     align-content: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 h1 a {
@@ -29,18 +30,16 @@ h1 a {
     margin: auto;
 }
 
-
 form {
     margin-top: 2rem;
 }
-
 
 /* Style for the toggle switch input */
 input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     width: 2.2rem;
-    height: 1.125rem;
+    height: 1.15rem;
     background-color: #ccc;
     border-radius: 0.625rem;
     position: relative;
@@ -55,14 +54,14 @@ input[type="checkbox"]::before {
     height: 0.875rem;
     background-color: white;
     border-radius: 50%;
-    top: 0.125rem;
-    left: 0.125rem;
-    transition: 0.3s;
+    top: 0.13rem;
+    left: 0.16rem;
+    transition: 0.1s;
 }
 
 /* Styling the toggle switch when checked */
 input[type="checkbox"]:checked::before {
-    left: 1.2rem;
+    left: 1.15rem;
 }
 
 input[type="checkbox"]:checked {
@@ -97,10 +96,28 @@ input[type="checkbox"]:checked {
 
 }
 
+.select-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.125rem 0.625rem;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0.4rem;
+}
+
+.select-all label {
+    margin: auto;
+    margin-right: 0.625rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #17744f ;
+}
+
 .toggle-item {
     display: flex;
     align-items: center;
-    padding: 0.125rem 0.625rem;
+    padding: 0.2rem 0.625rem;
     border-top: 0.125rem solid #3A9973;
     width: 100%;
     margin: auto;
@@ -109,7 +126,7 @@ input[type="checkbox"]:checked {
 .toggle-item label {
     margin: auto;
     margin-right: 0.625rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .centered-button {
@@ -148,7 +165,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 2.7rem;
+    height: 2.2rem;
     width: 100%;
     background-color: #3A9973;
     color: #154e37;
@@ -157,16 +174,16 @@ footer {
 }
 
 footer p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 footer a{
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-left: 1rem;
 }
 
 footer img{
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
